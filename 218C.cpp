@@ -8,6 +8,10 @@ int inf = numeric_limits<int>::max();
 ll INF = numeric_limits<ll>::max();
 #define rep(i, s, n) for (int i = (s); i < (int)(n); i++)
 
+
+/*
+1021
+*/
 int main(){
     int N;
     cin >> N;
