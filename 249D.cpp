@@ -42,9 +42,9 @@ int main(){
     int n;
     cin >> n;
 
-    vi A(MAX,0);
+    vector<int> A(MAX,0);
     int M = 0;
-    rep(i,0,n){
+    for(int i = 0; i < n; i++){
         int t;
         cin >> t;
         A[t]++;
@@ -58,9 +58,5 @@ int main(){
         }
     }
     cout << ans << endl;
-
-
-
-
 
 }

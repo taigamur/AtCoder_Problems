@@ -34,29 +34,33 @@ class Edge{
 };
 // vector<Edge> G[MAX];
 
+
 string S;
-void f(int t, int k){
-    if(t == 0){
-        cout << S[k] << endl;
-    }else{
-        if(k == 0){
-            char c = 'A' + (S[0]-'A'+t)%3 ;
-            cout << c << endl; 
-        }else{
-            f(t-1, k/2);
-            char c =  hu8778887
-        }
-    }    
+
+char g(char s, ll add){
+    int t = ((s - 'A') + add) % 3;
+    return 'A' + t;
+}
+
+char f (ll t, ll k){
+    if(t == 0) return S[k];
+    if(k == 0) return g(S[0],t);
+    return  g(f(t-1, k/2), k%2+1);
 }
 
 int main(){
-    int Q;
-    cin >> S >> Q;
+    cin >> S;
+    ll q;
+    cin >> q;
 
-    rep(i,0,Q){
-        int t,k;
+    rep(i,0,q){
+        ll t,k;
         cin >> t >> k;
-        f(t,k-1);
+        k--;
+        ll sum = 0;
+        ll tmp;
+
+        cout << f(t, k) << endl;
     }
 
 }
