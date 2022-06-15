@@ -40,7 +40,6 @@ class Edge{
 
 
 int main(){
-
     int N,Q;
     cin >> N >> Q;
 
